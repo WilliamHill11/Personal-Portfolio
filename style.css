@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+nav {
+  border: solid black 1px;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav > ul > li {
+  list-style-type: none;
+  margin: 2em;
+}
+
+@media (min-width: 900px) {
+  li {
+    font-size: 1.25rem;
+  }
+}
+
+.intro {
+  display: flex;
+  min-height: 20vh;
+  padding: 20em 0 10em 15em;
+}
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 2em;
+}
+
+.heading {
+  font-size: 5rem;
+}
+
+section > h2 {
+  font-size: 2rem;
+}
+
+.card {
+  border: solid black 1px;
+}
