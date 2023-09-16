@@ -9,17 +9,22 @@ html {
 }
 
 nav {
-  border: solid black 1px;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  background-color: aqua;
+  box-shadow: 10px 5px 5px 1px rgb(6, 101, 101);
 }
 
 nav > ul {
+  position: sticky;
   display: flex;
   justify-content: flex-end;
 }
 
 nav > ul > li {
   list-style-type: none;
-  margin: 2em;
+  margin: 1em;
 }
 
 @media (min-width: 900px) {
@@ -30,8 +35,12 @@ nav > ul > li {
 
 .intro {
   display: flex;
-  min-height: 20vh;
+  height: 100vh;
   padding: 20em 0 10em 15em;
+  background-image: url(bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .profile {
@@ -44,6 +53,15 @@ nav > ul > li {
 
 .heading {
   font-size: 5rem;
+  font-weight: bold;
+}
+
+main {
+  color: white;
+  background-image: url(bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 section > h2 {
@@ -53,12 +71,13 @@ section > h2 {
 .aboutMe > h2 {
   display: flex;
   justify-content: center;
+  padding-top: 2em;
 }
 
-/* .aboutMe {
-  display: flex;
-  justify-content: center;
-} */
+.border {
+  padding: 5em 35em 10em 35em;
+  border-bottom: 1px solid rgb(65, 65, 65);
+}
 
 .card {
   display: flex;
@@ -70,8 +89,11 @@ section > h2 {
 }
 
 img {
-  width: 650px;
-  height: 400px;
+  border: solid rgb(13, 109, 109) 2px;
+  border-radius: 5px;
+  width: 475px;
+  height: 300px;
+  box-shadow: 2px 2px 15px 2px rgb(0, 255, 255);
 }
 
 .projectTitle {
@@ -81,13 +103,17 @@ img {
 }
 
 .projectContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   padding: 2em;
 }
 
 .project {
   display: flex;
   margin: 3em;
+  padding-left: 12em;
+  gap: 15em;
+}
+
+h3 {
+  font-size: 2rem;
+  padding-bottom: 1em;
 }
