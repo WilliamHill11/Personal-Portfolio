@@ -3,31 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <a href="#intro"><li>Home</li></a>
+        <a href="#about"><li>About</li></a>
+        <a href="#project"><li>Projects</li></a>
+        <a href="#contact"><li>Contact</li></a>
       </ul>
     </nav>
-    <section class="intro">
-      <img class="profile" src="img.JPG" alt="picture of me" />
+    <section class="intro" id="intro">
+      <a href="https://github.com/WilliamHill11">
+        <img class="profile" src="img.JPG" alt="picture of me" />
+      </a>
       <div class="heading">
         <div>William Hill</div>
         <div>Web Developer</div>
       </div>
     </section>
     <main>
-      <section class="aboutMe">
+      <section class="aboutMe" id="about">
         <h2><u>About Me</u></h2>
         <div class="card">
           <p>Hi there! I'm William, a Front End Web Developer.</p>
           <p>Apart from coding, some other activities that I love to do!</p>
+          <br />
           <br />
           <br />
           <ul>
@@ -37,41 +40,90 @@
           </ul>
           <br />
           <br />
+          <br />
           <p>"Only you can change your life. No one can do it for you."</p>
           <footer>--Damien Thomas--</footer>
-          <div class="border"></div>
+          <div class="border" id="project"></div>
         </div>
       </section>
       <section>
-        <h2 class="projectTitle">Projects</h2>
+        <h2 class="projectTitle"><u>Projects</u></h2>
         <div class="projectContainer">
           <div class="project">
-            <img src="project1.png" alt="" />
-            <div  >
+            <a href="https://williamhill11.github.io/To-do-list-2/">
+              <img src="project1.png" alt="todo list" />
+            </a>
+            <div class="row">
               <h3>To-Do List</h3>
-              <p>This is the todo list application!</p>
+              <p class="text">
+                This is the todo list application! When in doubt just open this
+                handy dandy todo list and create your systematic todos. From
+                creating a simple list of todos to creating projects that
+                separate your list, the list goes on! -JavaScript
+              </p>
             </div>
           </div>
           <div class="project">
-            <img src="project2.png" alt="">
+            <a href="https://williamhill11.github.io/Weather-API/">
+              <img src="project2.png" alt="weather API" />
+            </a>
             <div class="row">
               <h3>Weather API</h3>
-              <p>This is the weather api app</p>
+              <p class="text">
+                A weather api that is used to check any cities current weather
+                conditions. Currently it is displaying the Camo City of the
+                Hidden Leaf -JavaScript
+              </p>
             </div>
           </div>
           <div class="project">
-            <img src="project3.png" alt="">
+            <a href="https://williamhill11.github.io/Library-Project/">
+              <img src="project3.png" alt="library app" />
+            </a>
             <div class="row">
               <h3>Library Collection</h3>
-              <p>This is the library collection</p>
+              <p class="text">
+                If you love books this is the perfect opportunity to create your
+                own library collection. You can add in your book details, delete
+                books, and check the status of read books -JavaScript
+              </p>
             </div>
           </div>
-          <div class="border"></div>
-        </div
+          <div class="bordertwo"></div>
+        </div>
       </section>
     </main>
     <footer>
-      <h2>Contact Me</h2>
+      <div class="contact" id="contact">
+        <h2><u>Contact Me</u></h2>
+        <div class="contactInfo">
+          <p style="font-size: 1.2rem">
+            My inbox is open. I'm always happy to answer a question or chat
+            about code.
+          </p>
+          <p style="font-size: 1.2rem">
+            <b><i>williamhill0831@hotmail.com</i></b>
+          </p>
+        </div>
+        <div class="form">
+          <form action="">
+            <input type="text" id="name" placeholder="Name" />
+            <label for="name"></label>
+
+            <input type="email" id="email" placeholder="Email" />
+            <label for="email"></label>
+
+            <textarea
+              name="message"
+              id="msg"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <button>Send</button>
+          </form>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

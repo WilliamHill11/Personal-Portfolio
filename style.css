@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  min-height: 100vh;
+  width: fit-content;
 }
 *,
 *:before,
@@ -10,9 +12,8 @@ html {
 
 nav {
   position: fixed;
-  width: 100%;
-  right: 0;
-  background-color: aqua;
+  min-width: 100%;
+  background-color: rgb(0, 255, 255);
   box-shadow: 10px 5px 5px 1px rgb(6, 101, 101);
 }
 
@@ -20,27 +21,31 @@ nav > ul {
   position: sticky;
   display: flex;
   justify-content: flex-end;
+  font-weight: bold;
 }
 
-nav > ul > li {
+a {
   list-style-type: none;
   margin: 1em;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 
-@media (min-width: 900px) {
-  li {
-    font-size: 1.25rem;
-  }
+a > li:hover {
+  box-shadow: 1px 1px 5px 5px rgb(2, 172, 172);
+  border-radius: 5px;
 }
 
 .intro {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20em 0 10em 15em;
-  background-image: url(bg1.jpg);
-  background-repeat: no-repeat;
+  background: url(bg1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  image-rendering: -webkit-optimize-contrast;
 }
 
 .profile {
@@ -58,24 +63,32 @@ nav > ul > li {
 
 main {
   color: white;
-  background-image: url(bg2.jpg);
-  background-repeat: no-repeat;
+  background: url(bg2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  image-rendering: -webkit-optimize-contrast;
 }
 
-section > h2 {
+h2 {
   font-size: 3rem;
+  color: aqua;
 }
 
 .aboutMe > h2 {
   display: flex;
   justify-content: center;
-  padding-top: 2em;
+  padding-top: 4em;
+  padding-bottom: 1em;
 }
 
 .border {
-  padding: 5em 35em 10em 35em;
+  padding: 0em 35em 10em 35em;
+  border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.bordertwo {
+  border-width: 1500px;
   border-bottom: 1px solid rgb(65, 65, 65);
 }
 
@@ -88,18 +101,21 @@ section > h2 {
   font-size: 1.25rem;
 }
 
+.intro > a > img:hover {
+  box-shadow: 2px 2px 15px 5px rgb(0, 255, 255);
+}
+
 img {
-  border: solid rgb(13, 109, 109) 2px;
   border-radius: 5px;
   width: 475px;
   height: 300px;
-  box-shadow: 2px 2px 15px 2px rgb(0, 255, 255);
 }
 
 .projectTitle {
   display: flex;
   justify-content: center;
-  margin-top: 3em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .projectContainer {
@@ -113,7 +129,98 @@ img {
   gap: 15em;
 }
 
+.project > a > img {
+  box-shadow: 2px 2px 20px 2px rgb(20, 185, 185);
+}
+
+.project > a > img:hover {
+  box-shadow: 2px 2px 25px 2px rgb(0, 255, 255);
+}
+
+.text {
+  font-size: 1.1rem;
+}
+
+.row {
+  width: 40%;
+}
+
 h3 {
   font-size: 2rem;
   padding-bottom: 1em;
+}
+
+footer {
+  background: url(bg2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.contact > h2 {
+  font-size: 3rem;
+  color: aqua;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 5em 0em 1em 25em;
+}
+
+.contactInfo {
+  padding-top: 2em;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 3em;
+  padding-right: 25em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+
+input {
+  padding: 0.25em;
+}
+
+button {
+  width: 70px;
+  border-radius: 15px;
+  outline: none;
+  background: #171616;
+  color: aqua;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #302f2f;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    font-size: 1rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
 }
