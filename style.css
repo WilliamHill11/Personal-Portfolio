@@ -4,15 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #ffe600;
 }
 
-/* :root {
-  overflow-x: hidden;
-} */
-
+html,
 body {
-  width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -131,12 +127,16 @@ img {
 
 .projectContainer {
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15em;
+  margin-left: 15em;
 }
 
 .project {
   display: flex;
+  flex-wrap: wrap;
   margin: 3em;
-  padding-left: 12em;
   gap: 15em;
 }
 
@@ -153,7 +153,13 @@ img {
 }
 
 .row {
-  width: 40%;
+  width: 35%;
+  display: grid;
+}
+
+.row > h3 {
+  display: flex;
+  align-items: center;
 }
 
 h3 {
@@ -217,7 +223,14 @@ button:hover {
   background: #302f2f;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 475px) {
+  img {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 1015px) {
   h2 {
     font-size: 2rem;
   }
@@ -227,20 +240,78 @@ button:hover {
   }
 
   .heading {
-    font-size: 1rem;
+    font-size: 4rem;
   }
 
   .profile {
-    width: 100px;
-    height: 100px;
-  }
-
-  img {
     width: 200px;
-    height: 300px;
+    height: 200px;
   }
 
-  .project {
+  .row {
     width: 100%;
+  }
+
+  .projectContainer {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 742px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .profile {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 1790px) {
+  .project {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .row > h3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 50%;
+
+    .text {
+      text-align: center;
+    }
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contactInfo {
+    width: 70%;
+  }
+
+  input {
+    width: 500px;
   }
 }
