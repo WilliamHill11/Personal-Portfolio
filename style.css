@@ -240,6 +240,23 @@ button:hover {
     width: 300px;
     height: 250px;
   }
+
+  nav {
+    display: flex;
+  }
+
+  nav > ul > li {
+    font-size: 10px;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    text-align: center;
+  }
 }
 
 @media (max-width: 1015px) {
